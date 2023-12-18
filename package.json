@@ -1,0 +1,70 @@
+{
+  "name": "@defra/logging-metrics",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Defra Common Platform logging metrics",
+  "author": "Department for Environment, Food and Rural Affairs https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs.",
+  "license": "OGL-UK-3.0",
+  "type": "module",
+  "module": "commonjs",
+  "main": "src/metrics.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "applicationinsights": "^2.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-plugin-jest": "^27.4.3",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true,
+      "es2021": true
+    },
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "verbose": true,
+    "clearMocks": true,    
+    "moduleFileExtensions": ["js", "ts"],
+    "ignorePatterns": [
+      "**/dist/*.js"
+    ],
+    "plugins": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-node",
+    "transform": {},
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/**/src/**/*.js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ],
+    "rootDir": ".",
+    "resetMocks": true,
+    "setupFiles": ["<rootDir>/.jest/test.env.js"],
+    "setupFilesAfterEnv": ["<rootDir>/.jest/setup.js"]
+  }
+}

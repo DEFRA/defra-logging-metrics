@@ -1,0 +1,17 @@
+{
+  "name": "defra-logging-metrics-sample",
+  "type": "module",
+  "module": "commonjs",
+  "main": "sample.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "node sample.js"
+  },
+  "dependencies": {
+    "@defra/logging-metrics": "file:../src",
+    "applicationinsights": "^2.9.0",
+    "dotenv": "^16.3.1"
+  }
+}
