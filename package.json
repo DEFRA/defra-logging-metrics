@@ -22,14 +22,17 @@
   "devDependencies": {
     "eslint": "^8.52.0",
     "eslint-plugin-jest": "^27.4.3",
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "standard": "^17.1.0"
   },
   "engines": {
     "node": ">=16"
   },
   "env": {
     "test": {
-      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs"
+      ]
     }
   },
   "eslintConfig": {
@@ -46,8 +49,11 @@
       "sourceType": "module"
     },
     "verbose": true,
-    "clearMocks": true,    
-    "moduleFileExtensions": ["js", "ts"],
+    "clearMocks": true,
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
     "ignorePatterns": [
       "**/dist/*.js"
     ],
@@ -68,7 +74,14 @@
     ],
     "rootDir": ".",
     "resetMocks": true,
-    "setupFiles": ["<rootDir>/.jest/test.env.js"],
-    "setupFilesAfterEnv": ["<rootDir>/.jest/setup.js"]
+    "setupFiles": [
+      "<rootDir>/.jest/test.env.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/.jest/setup.js"
+    ]
+  },
+  "standard": {
+    "globals": [ "describe", "beforeEach", "afterEach", "afterAll", "expect", "it" ]
   }
 }
